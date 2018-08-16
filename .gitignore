@@ -7,7 +7,6 @@ local_settings.py
 db.sqlite3
 media
 settings.py
-Booklibrary/settings.py
 
 # Environments
 .env
@@ -17,3 +16,5 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+user_stuff.txt
