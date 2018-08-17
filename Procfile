@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath django-books-organizer Booklibrary.wsgi --log-file -
+web: gunicorn --pythonpath booklibrary-django Booklibrary.wsgi --log-file -
