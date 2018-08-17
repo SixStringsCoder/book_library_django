@@ -1,9 +1,9 @@
 from django.db import models
 from django.urls import reverse
-import uuid # Required for unique book instances
+import uuid  # Required for unique book instances
+
 
 # Create your models here.
-
 class Genre(models.Model):
     """Model for book genres"""
     name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction, Mystery, etc.)')
@@ -12,8 +12,9 @@ class Genre(models.Model):
         """String for representing the Model object; appears in Admin area"""
         return self.name
 
+
 class Language(models.Model):
-    name = models.CharField(max_length=25, help_text='Enter, in Roman script, the language the book is written in (e.g. Chinese, Farsi).')
+    name = models.CharField(max_length=25, help_text='Enter the language the book is written in (e.g. Chinese, Farsi).')
 
     def __str__(self):
         return self.name
@@ -34,11 +35,17 @@ class Book(models.Model):
         """define a URL mapping that has the name book-detail, and define an associated view and template"""
         return reverse('book-detail', args=[str(self.id)])
 
+    def display_genre(self):
+        """Create a string for Genre. This is required to display genre in Admin."""
+        return ', '.join(genre.name for genre in self.genre.all()[:3])
+
+    display_genre.short_description = 'Genre'
+
 
 class BookInstance(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular book across whole library')
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique library ID for this book')
     book = models.ForeignKey(Book, on_delete=models.SET_NULL, null=True)
-    media = models.CharField(max_length=200, default='paperback', help_text='Type of media such as hardback, paperback, audiobook')
+    media = models.CharField(max_length=200, default='paperback', help_text='Type of media (e.g. hardback, audiobook)')
     due_back = models.DateField(null=True, blank=True)
 
     LOAN_STATUS = (
