@@ -11,6 +11,8 @@ media
 # Environments
 bookenv/
 bookenv.bak/
+booklibraryvenv/
+booklibraryvenv.bak/
 .env
 .venv
 env/
