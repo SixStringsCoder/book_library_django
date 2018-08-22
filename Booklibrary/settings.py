@@ -25,7 +25,7 @@ SECRET_KEY = '@pn*1cz3ti_%jlap7rdpagde=mgcds)0=3$+99a7#f2zq@m#7z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'booklibrary-django.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
