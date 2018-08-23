@@ -20,3 +20,9 @@ main {
     display: flex;
     justify-content: flex-end;
 }
+
+#username {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: darkred;
+}

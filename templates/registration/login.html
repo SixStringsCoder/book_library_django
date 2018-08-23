@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-
+<main>
 {% if form.errors %}
   <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -11,11 +11,10 @@
     <p>Your account doesn't have access to this page. To proceed,
     please login with an account that has access.</p>
   {% else %}
-    <p>Please login to see this page.</p>
+    <h5>Please login to see this page.</h5>
   {% endif %}
 {% endif %}
 
-<main>
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
 
