@@ -32,15 +32,18 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 
-class BookListView(LoginRequiredMixin, generic.ListView):
-    login_url = '/login/'
-    redirect_field_name = 'redirect_to'
-
+class BookListView(generic.ListView):
     model = Book
 
 
-class BookDetailView(LoginRequiredMixin, generic.DetailView):
-    login_url = '/login/'
-    redirect_field_name = 'redirect_to'
-
+class BookDetailView(generic.DetailView):
     model = Book
+
+
+class LoanBooksByUserListView(LoginRequiredMixin, generic.ListView):
+    model = BookInstance
+    template_name ='catalog/bookinstance_list_borrowed_user.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')

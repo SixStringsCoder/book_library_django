@@ -34,7 +34,7 @@ class BookAdmin(admin.ModelAdmin):
 @admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
     # Dislayed in list view
-    list_display = ('id', 'book', 'media', 'status', 'due_back')
+    list_display = ('id', 'book', 'borrower', 'media', 'status', 'due_back')
     list_filter = ('status', 'due_back')
 
     # Display for a book instance
@@ -43,6 +43,6 @@ class BookInstanceAdmin(admin.ModelAdmin):
             'fields': ('book', 'media', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back')
+            'fields': ('status', 'due_back', 'borrower',)
         }),
     )
