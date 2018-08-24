@@ -21,8 +21,8 @@ main {
     justify-content: flex-end;
 }
 
-#username {
+.username, .staff {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: darkred;
 }

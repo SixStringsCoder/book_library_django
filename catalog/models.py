@@ -68,6 +68,7 @@ class BookInstance(models.Model):
 
     class Meta:
         ordering = ['due_back']
+        permissions = (("can_mark_returned", "Set book as returned"),)
 
     def __str__(self):
         """Represents the Model object by ID and book title."""
@@ -78,6 +79,7 @@ class BookInstance(models.Model):
         if self.due_back and date.today() > self.due_back:
             return True
         return False
+
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
