@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from catalog.models import Book, BookInstance, Author, Genre, Language
-from django.views import  generic
-from django.contrib.auth.decorators import login_required
+from catalog.forms import RenewBookForm
+from django.views import generic
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+import datetime
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 
 # Create your views here.
 
@@ -57,3 +62,27 @@ class LoanedBooksLibrarianListView(PermissionRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return BookInstance.objects.filter(status__exact='o').order_by('due_back')
+
+
+@permission_required('catalog.can_mark_returned')
+def renew_book_librarian(request, pk):
+    """View function for renewing a specific BookInstance by librarian."""
+    book_instance = get_object_or_404(BookInstance, pk=pk)
+
+    if request.method == 'POST':
+        book_renewal_form = RenewBookForm(request.POST)
+
+        if book_renewal_form.is_valid():
+            book_instance.due_back = form.cleaned_data['renewal_date']
+            book_instance.save()
+            return HttpResponseRedirect(reverse('all-borrowed'))
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+
+    context = {
+        'form': book_renewal_form,
+        'book_instance': book_instance,
+    }
+
+    return render('request', 'catalog/book_renew_librarian.html', context)
