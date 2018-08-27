@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from catalog.models import Book, BookInstance, Author, Genre, Language
+from catalog.models import Book, BookInstance, Author, Genre
 from .forms import RenewBookForm
 from django.views import generic
 from django.contrib.auth.decorators import login_required, permission_required
@@ -8,8 +8,6 @@ import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-
-# Create your views here.
 
 """View function for home page of site."""
 @login_required
@@ -47,7 +45,7 @@ class BookDetailView(generic.DetailView):
 
 class LoanBooksByUserListView(LoginRequiredMixin, generic.ListView):
     model = BookInstance
-    template_name ='catalog/bookinstance_list_borrowed_user.html'
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
     paginate_by = 10
 
     def get_queryset(self):
@@ -78,11 +76,11 @@ def renew_book_librarian(request, pk):
             return HttpResponseRedirect(reverse('all-borrowed'))
     else:
         proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date, })
 
     context = {
         'form': book_renewal_form,
         'bookinst': book_inst,
     }
 
-    return render('request', 'catalog/book_renew_librarian.html', context)
+    return render(request, 'catalog/book_renew_librarian.html', context)
