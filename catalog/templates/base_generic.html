@@ -18,7 +18,7 @@
         <ul class="sidebar-nav">
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'books' %}">All books</a></li>
-          <li><a href="">All authors</a></li>
+          <li><a href="{% url 'authors' %}">All authors</a></li>
           <li><hr /></li>
         {% if user.is_authenticated %}
             <li><strong>User: </strong><span class="username">{{ user.get_username }}</span></li>
@@ -41,7 +41,11 @@
      {% endblock %}
 
       </div>
-      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
+      <div class="col-sm-10 ">
+          <main>
+            {% block content %}{% endblock %}
+          </main>
+      </div>
     </div>
   </div>
 </body>
