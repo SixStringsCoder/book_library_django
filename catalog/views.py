@@ -98,7 +98,7 @@ def renew_book_librarian(request, pk):
 class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
     fields = '__all__'
-    initial = {'date_of_birth': '12/10/65'}
+    initial = {'date_of_birth': 'MM/DD/YY'}
     permission_required = 'catalog.can_edit_author'
 
 
@@ -112,3 +112,5 @@ class AuthorDelete(PermissionRequiredMixin, DeleteView):
     model = Author
     success_url = reverse_lazy('authors')
     permission_required = 'catalog.can_edit_author'
+
+

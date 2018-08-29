@@ -68,7 +68,7 @@ class BookInstance(models.Model):
 
     class Meta:
         ordering = ['due_back']
-        permissions = (("can_mark_returned", "Set book as returned"), ("can_edit_author", "Edit author"),)
+        permissions = (("can_mark_returned", "Set book as returned"),)
 
     def __str__(self):
         """Represents the Model object by ID and book title."""
@@ -89,6 +89,8 @@ class Author(models.Model):
 
     class Meta:
         ordering = ['last_name', 'first_name']
+        permissions = (("can_edit_author", "Can add, edit or delete author"),)
+
 
     def get_absolute_url(self):
         return reverse('author-detail', args=[str(self.id)])
