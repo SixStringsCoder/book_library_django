@@ -8,6 +8,7 @@
   <p><strong>ISBN:</strong> {{ book.isbn }}</p>
   <p><strong>Language:</strong> {{ book.lang }}</p>
   <p><strong>Genre:</strong> {% for genre in book.genre.all %} {{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <a href="{% url 'book-update' book.pk %}"><button>Edit</button></a>
 
   <div style="margin-left:20px;margin-top:20px">
     <h4>Copies</h4>

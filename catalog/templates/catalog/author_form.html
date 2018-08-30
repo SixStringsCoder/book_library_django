@@ -3,9 +3,11 @@
 {% block content %}
   <main>
      <h3>Create or Edit Author's Details</h3>
-       <form action="" method="post">
+       <form action="" method="POST">
          {% csrf_token %}
-         {{ form.as_table }}
+         <table>
+             {{ form.as_table }}
+         </table>
         <input type="submit" value="Submit">
        </form>
   </main>

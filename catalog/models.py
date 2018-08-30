@@ -37,6 +37,9 @@ class Book(models.Model):
         """define a URL mapping that has the name book-detail, and define an associated view and template"""
         return reverse('book-detail', args=[str(self.id)])
 
+    class Meta:
+        permissions = (("can_edit_book", "Can add, edit, delete books"),)
+
     def display_genre(self):
         """Create a string for Genre. This is required to display genre in Admin."""
         return ', '.join(genre.name for genre in self.genre.all()[:3])
