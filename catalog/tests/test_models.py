@@ -1,5 +1,5 @@
 from django.test import TestCase
-from catalog.models import Author, Genre, Language
+from catalog.models import Author, Genre, Language, Book
 
 
 class AuthorModelTest(TestCase):
@@ -47,6 +47,57 @@ class AuthorModelTest(TestCase):
         author = Author.objects.get(id=1)
         # This will also fail if the urlconf is not defined.
         self.assertEquals(author.get_absolute_url(), '/catalog/author/1')
+
+
+class BookModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        Book.objects.create(title='Y Is for Yesterday')
+
+    def test_title_label(self):
+        title = Book.objects.get(id=1)
+        field_label = title._meta.get_field('title').verbose_name
+        self.assertEquals(field_label, 'title')
+
+    def test_author_label(self):
+        author = Book.objects.get(id=1)
+        field_label = author._meta.get_field('author').verbose_name
+        self.assertEquals(field_label, 'author')
+
+    def test_summary_label(self):
+        summary = Book.objects.get(id=1)
+        field_label = summary._meta.get_field('summary').verbose_name
+        self.assertEquals(field_label, 'summary')
+
+    def test_isbn_label(self):
+        isbn = Book.objects.get(id=1)
+        field_label = isbn._meta.get_field('isbn').verbose_name
+        self.assertEquals(field_label, 'ISBN')
+
+    def test_genre_label(self):
+        genre = Book.objects.get(id=1)
+        field_label = genre._meta.get_field('genre').verbose_name
+        self.assertEquals(field_label, 'genre')
+
+    def test_lang_label(self):
+        lang = Book.objects.get(id=1)
+        field_label = lang._meta.get_field('lang').verbose_name
+        self.assertEquals(field_label, 'lang')
+
+    def test_title_max_length(self):
+        title = Book.objects.get(id=1)
+        max_length = title._meta.get_field('title').max_length
+        self.assertEquals(max_length, 200)
+
+    def test_summary_max_length(self):
+        summary = Book.objects.get(id=1)
+        max_length = summary._meta.get_field('summary').max_length
+        self.assertEquals(max_length, 1000)
+
+    def test_isbn_max_length(self):
+        isbn = Book.objects.get(id=1)
+        max_length = isbn._meta.get_field('isbn').max_length
+        self.assertEquals(max_length, 13)
 
 
 class GenreModelTest(TestCase):
