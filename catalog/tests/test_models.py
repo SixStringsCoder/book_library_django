@@ -1,5 +1,5 @@
 from django.test import TestCase
-from catalog.models import Author, Genre, Language, Book
+from catalog.models import Author, Genre, Language, Book, BookInstance
 
 
 class AuthorModelTest(TestCase):
@@ -100,6 +100,27 @@ class BookModelTest(TestCase):
         self.assertEquals(max_length, 13)
 
 
+class BookInstanceModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        BookInstance.objects.create(id='04a77f53-172c-4579-9a39-64e7cc30fd66')
+
+    def test_bookinstance_id_help_text(self):
+        id = BookInstance.objects.get(id='04a77f53-172c-4579-9a39-64e7cc30fd66')
+        help_text = id._meta.get_field('id').help_text
+        self.assertEquals(help_text, 'Unique library ID for this book')
+
+    def test_bookinstance_media_help_text(self):
+        media = BookInstance.objects.get(id='04a77f53-172c-4579-9a39-64e7cc30fd66')
+        help_text = media._meta.get_field('media').help_text
+        self.assertEquals(help_text, 'Type of media (e.g. hardback, audiobook)')
+
+    def test_bookinstance_max_lengthl(self):
+        media = BookInstance.objects.get(id='04a77f53-172c-4579-9a39-64e7cc30fd66')
+        max_length = media._meta.get_field('media').max_length
+        self.assertEquals(max_length, 200)
+
+
 class GenreModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -109,6 +130,11 @@ class GenreModelTest(TestCase):
         genre = Genre.objects.get(id=1)
         max_length = genre._meta.get_field('name').max_length
         self.assertEquals(max_length, 200)
+
+    def test_genre_name_help_text(self):
+        name = Genre.objects.get(id=1)
+        help_text = name._meta.get_field('name').help_text
+        self.assertEquals(help_text, 'Enter a book genre (e.g. Science Fiction, Mystery, etc.)')
 
 
 class LanguageModelTest(TestCase):
@@ -120,3 +146,8 @@ class LanguageModelTest(TestCase):
         language = Language.objects.get(id=1)
         max_length = language._meta.get_field('name').max_length
         self.assertLessEqual(max_length, 25)
+
+    def test_langauge_name_help_text(self):
+        name = Language.objects.get(id=1)
+        help_text = name._meta.get_field('name').help_text
+        self.assertEquals(help_text, 'Enter the language the book is written in (e.g. Chinese, Farsi).')
