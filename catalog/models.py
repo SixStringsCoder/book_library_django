@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from datetime import date
 
 
-# Create your models here.
 class Genre(models.Model):
     """Model for book genres"""
     name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction, Mystery, etc.)')
