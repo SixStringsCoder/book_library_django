@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5b70c8f5-fc5f-450a-ba7d-22f1b9eb7eaf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/tests/test_forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/tests/test_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +66,7 @@
           <entry key="html" value="84" />
           <entry key="pip" value="2" />
           <entry key="pip3" value="1" />
-          <entry key="py" value="64" />
+          <entry key="py" value="71" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
@@ -74,7 +76,7 @@
           <entry key="Database Element" value="1" />
           <entry key="HTML" value="84" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="67" />
+          <entry key="Python" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -82,7 +84,7 @@
           <entry key="css" value="198" />
           <entry key="gitignore" value="25" />
           <entry key="html" value="3330" />
-          <entry key="py" value="8137" />
+          <entry key="py" value="9141" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
@@ -91,49 +93,48 @@
           <entry key="CSS" value="198" />
           <entry key="HTML" value="3330" />
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="8137" />
+          <entry key="Python" value="9141" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4565972">
+    <splitter split-orientation="horizontal" split-proportion="0.5182292">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/catalog/models.py">
+            <entry file="file://$PROJECT_DIR$/catalog/tests/test_views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="387">
-                  <caret line="101" selection-start-line="101" selection-end-line="101" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                    <marker date="1536443540000" expanded="true" signature="1515:1595" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/catalog/tests/test_models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+                <state relative-caret-position="81">
+                  <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
+                    <marker date="1536469103000" expanded="true" signature="136:418" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/catalog/tests/test_views.py">
+            <entry file="file://$PROJECT_DIR$/catalog/tests/test_forms.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="163">
-                  <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+                <state relative-caret-position="387">
+                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
-                    <marker date="1536444962000" expanded="true" signature="161:166" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catalog/forms.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -143,14 +144,30 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/catalog/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="155">
+                <state relative-caret-position="-937">
                   <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                     <marker date="1536443540000" expanded="true" signature="1515:1595" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/catalog/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#0#54#0" expanded="true" />
+                    <marker date="1536467212000" expanded="true" signature="1731:1753" ph="..." />
+                    <marker date="1536467212000" expanded="true" signature="3946:3951" ph="..." />
+                    <marker date="1536467212000" expanded="true" signature="4093:4098" ph="..." />
+                    <marker date="1536467212000" expanded="true" signature="4240:4245" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -197,13 +214,11 @@
         <option value="$PROJECT_DIR$/catalog/templates/catalog/bookinstance_librarian_list_borrowed.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/bookinstance_list_borrowed_user.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/book_renew_librarian.html" />
-        <option value="$PROJECT_DIR$/catalog/forms.py" />
         <option value="$PROJECT_DIR$/catalog/templates/base_generic.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/author_detail.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/author_confirm_delete.html" />
-        <option value="$PROJECT_DIR$/catalog/views.py" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/book_form.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/author_form.html" />
         <option value="$PROJECT_DIR$/catalog/urls.py" />
@@ -212,10 +227,12 @@
         <option value="$PROJECT_DIR$/catalog/templates/catalog/book_list.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/book_confirm_delete.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/author_list.html" />
-        <option value="$PROJECT_DIR$/catalog/tests/test_forms.py" />
-        <option value="$PROJECT_DIR$/catalog/tests/test_models.py" />
         <option value="$PROJECT_DIR$/catalog/models.py" />
+        <option value="$PROJECT_DIR$/catalog/views.py" />
+        <option value="$PROJECT_DIR$/catalog/tests/test_models.py" />
         <option value="$PROJECT_DIR$/catalog/tests/test_views.py" />
+        <option value="$PROJECT_DIR$/catalog/forms.py" />
+        <option value="$PROJECT_DIR$/catalog/tests/test_forms.py" />
       </list>
     </option>
   </component>
@@ -247,6 +264,12 @@
               <item name="Booklibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Booklibrary" type="462c0819:PsiDirectoryNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Booklibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Booklibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -547,16 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/templates/catalog/book_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -599,42 +612,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="124" column="22" lean-forward="true" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1535605833000" expanded="true" signature="1711:1733" ph="..." />
-            <marker date="1535605833000" expanded="true" signature="3926:3931" ph="..." />
-            <marker date="1535605833000" expanded="true" signature="4073:4078" ph="..." />
-            <marker date="1535605833000" expanded="true" signature="4220:4225" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/tests.py" />
-    <entry file="file://$PROJECT_DIR$/catalog/tests/test_forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/tests/test_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+        <state relative-caret-position="2085">
+          <caret line="139" column="30" lean-forward="true" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1536469103000" expanded="true" signature="136:418" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="225">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="39" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -643,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="-937">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <marker date="1536443540000" expanded="true" signature="1515:1595" ph="..." />
@@ -652,13 +665,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/tests/test_views.py">
+    <entry file="file://$PROJECT_DIR$/catalog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        <state relative-caret-position="360">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1536467212000" expanded="true" signature="1731:1753" ph="..." />
+            <marker date="1536467212000" expanded="true" signature="3946:3951" ph="..." />
+            <marker date="1536467212000" expanded="true" signature="4093:4098" ph="..." />
+            <marker date="1536467212000" expanded="true" signature="4240:4245" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/tests/test_forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1536444962000" expanded="true" signature="161:166" ph="..." />
           </folding>
         </state>
       </provider>
