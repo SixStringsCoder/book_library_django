@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath booklibrary-django Booklibrary.wsgi --log-file -
+web: gunicorn Booklibrary.wsgi --log-file -
